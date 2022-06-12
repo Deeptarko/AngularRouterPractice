@@ -1,0 +1,50 @@
+<div class="container">
+  <p>student works!</p>
+  <p>Welcome {{ user.name }} with student id {{ user.id }}</p>
+</div>
+
+<form class="container" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group m-4" ngModelGroup="userData">
+    <label for="exampleInputEmail1 m-4">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      ngModel
+      name="email"
+      required
+      email
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <div class="form-group m-4">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      ngModel
+      name="password"
+    />
+  </div>
+
+  <div class="form-group m-4">
+    <label for="exampleFormControlSelect1">Select Questions</label>
+    <select
+      class="form-control"
+      id="exampleFormControlSelect1"
+      ngModel
+      name="secret"
+    >
+      <option>What is your pet name</option>
+      <option>WHat is the name of your first crush</option>
+    </select>
+  </div>
+
+  <button type="submit " class="btn btn-primary m-4">Submit</button>
+</form>

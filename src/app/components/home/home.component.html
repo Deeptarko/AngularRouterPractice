@@ -1,0 +1,18 @@
+<p>home works!</p>
+
+<h1 *ngIf="show=='yes' else elseBlock">I am heading</h1>
+<ng-template #elseBlock>
+    <h1>Else Condition</h1>
+</ng-template>
+
+
+
+<ng-template [ngIf]="show=='yes'">
+
+    <h1>Using Property Binding</h1>
+
+</ng-template>
+
+
+
+<button class="btn btn-warning" (click)="toggleShow()">Toggle Show</button>
